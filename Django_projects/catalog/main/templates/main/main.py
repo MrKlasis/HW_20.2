@@ -1,14 +1,32 @@
-from flask import Flask, render_template
+from django.shortcuts import render
+from django.urls import path
+from django.conf import settings
+from django.core.management import execute_from_command_line
+import os
 
-app = Flask(__name__)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-@app.route('/')
-def home():
-    return render_template('home.html')
+def home(request):
+    return render(request, 'home.html')
 
-@app.route('/contacts')
-def contacts():
-    return render_template('contacts.html')
+def contacts(request):
+    return render(request, 'contacts.html')
+
+urlpatterns = [
+    path('', home, name='home'),
+    path('contacts', contacts, name='contacts'),
+]
 
 if __name__ == '__main__':
-    app.run(host='localhost', port=8080)
+    settings.configure(
+        DEBUG=True,
+        ROOT_URLCONF=__name__,
+        TEMPLATES=[
+            {
+                'BACKEND': 'django.template.backends.django.DjangoTemplates',
+                'DIRS': [os.path.join(BASE_DIR, 'templates')],
+                'APP_DIRS': True,
+            },
+        ],
+    )
+    execute_from_command_line(["manage.py", "runserver"])
