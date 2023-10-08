@@ -12,7 +12,7 @@ class DBManager:
 
     def save_to_database(self, vacancies):
         cur = self.conn.cursor()
-
+        #сохранение данных в ДБ
         for vacancy in vacancies['items']:
             vacancy_id = vacancy['id']
             vacancy_name = vacancy['name']

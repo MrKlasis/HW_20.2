@@ -2,7 +2,7 @@ import requests
 import settings
 import sqlite3
 
-
+#рудемент
 class ApiHH():
     def __init__(self):
         self.db_connection = sqlite3.connect(settings.DB_PATH)
