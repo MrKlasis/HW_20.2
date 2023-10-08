@@ -1,3 +1,4 @@
+#подключение к БД
 host = 'localhost'
 port = 5432
 database = 'CW_5'
