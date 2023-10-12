@@ -1,11 +1,11 @@
 #!/usr/bin/venv python
 """Django's command-line utility for administrative tasks."""
-import os
 import sys
 from django.shortcuts import render
 from django.urls import path
 from django.conf import settings
 from django.core.management import execute_from_command_line
+import os
 
 
 
