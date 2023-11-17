@@ -2,8 +2,8 @@ from django.contrib.auth.views import LoginView, LogoutView
 from django.urls import path
 from django.views.generic import TemplateView
 
-from catalog.users.apps import UsersConfig
-from catalog.users.views import RegisterView, ProfileView, activate, RestoreView
+from users.apps import UsersConfig
+from users.views import RegisterView, ProfileView, activate, RestoreView
 
 app_name = UsersConfig.name
 

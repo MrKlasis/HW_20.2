@@ -1,8 +1,8 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
-from catalog.blog.models import NULLABLE
-from catalog.users.utils import create_token
+from blog.models import NULLABLE
+from users.utils import create_token
 
 
 class User(AbstractUser):

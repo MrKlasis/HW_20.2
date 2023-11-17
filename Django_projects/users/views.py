@@ -5,9 +5,9 @@ from django.urls import reverse_lazy, reverse
 from django.views.generic import CreateView, UpdateView, TemplateView
 
 import users
-from catalog.users.forms import UserRegisterForm, UserProfileForm
-from catalog.users.models import User
-from catalog.users.utils import restore_password
+from users.forms import UserRegisterForm, UserProfileForm
+from users.models import User
+from users.utils import restore_password
 
 
 class RegisterView(CreateView):

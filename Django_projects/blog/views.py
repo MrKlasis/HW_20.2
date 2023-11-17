@@ -3,7 +3,7 @@ from django.views.generic import CreateView
 from django.views.generic import ListView, DetailView, UpdateView, DeleteView
 from pytils.translit import slugify
 
-from catalog.blog.models import Blog
+from blog.models import Blog
 
 
 class BlogCreateView(CreateView):
