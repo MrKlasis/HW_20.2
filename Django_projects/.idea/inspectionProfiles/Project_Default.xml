@@ -5,7 +5,6 @@
       <option name="ignoredIdentifiers">
         <list>
           <option value="requests" />
-          <option value="main.urls.index" />
         </list>
       </option>
     </inspection_tool>
