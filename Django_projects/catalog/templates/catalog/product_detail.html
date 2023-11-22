@@ -12,7 +12,7 @@
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12">
                 <div class="card mb-4 box-shadow">
-                    <h4>Оисание</h4>
+                    <h4>Описание</h4>
                     {{ object.description|description_filter }}
                     {% for version in object.version_set.all %}
                         {% if version.activate %}
